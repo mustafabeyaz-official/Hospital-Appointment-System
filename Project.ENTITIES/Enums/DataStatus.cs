@@ -8,7 +8,8 @@ namespace Project.ENTITIES.Enums
 {
     public enum DataStatus
     {
-        Active = 1,
-        Deleted = 2
+        Inserted = 1,
+        Updated = 2,
+        Deleted = 3
     }
 }
