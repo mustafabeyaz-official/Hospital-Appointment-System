@@ -13,5 +13,6 @@ namespace Project.ENTITIES.Models
 
         //Relational Properties
         public List<ClinicList> ClinicLists { get; set; }
+        public List<Doctor> Doctors { get; set; }
     }
 }

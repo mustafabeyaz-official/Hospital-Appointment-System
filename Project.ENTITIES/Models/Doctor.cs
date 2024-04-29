@@ -11,8 +11,10 @@ namespace Project.ENTITIES.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Title { get; set; }
+        public int ClinicID { get; set; }
 
         //Relatioanl Properties
         public List<Appointment> Appointments { get; set; }
+        public Clinic Clinic { get; set; }
     }
 }
