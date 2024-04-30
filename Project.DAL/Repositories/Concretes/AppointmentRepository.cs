@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Project.DAL.Repositories.Concretes
 {
-    public class AppointmentRepository : BaseRepository<Appointment>, IAppointmentRepositiory
+    public class AppointmentRepository : BaseRepository<Appointment>, IAppointmentRepository
     {
         public AppointmentRepository(MyContext db):base(db)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project.DAL.Repositories.Abstracts
 {
-    public interface IAppointmentRepositiory : IRepository<Appointment>
+    public interface IAppointmentRepository : IRepository<Appointment>
     {
     }
 }

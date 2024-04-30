@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Project.BLL.ManagerServices.Abstracts;
+using Project.BLL.ManagerServices.Concretes;
 using Project.DAL.Repositories.Abstracts;
 using Project.DAL.Repositories.Concretes;
 using System;
@@ -15,9 +17,10 @@ namespace Project.BLL.DependencyResolvers
         {
             //main interfaceses, classes
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            services.AddScoped(typeof(IManager<>), typeof(BaseManager<>));
 
             //repositories
-            services.AddScoped<IAppointmentRepositiory, AppointmentRepository>();
+            services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<IClinicLIstRepository, ClinicListRepository>();
             services.AddScoped<IClinicRepository, ClinicRepository>();
             services.AddScoped<IDoctorRepository, DoctorRepository>();
@@ -26,6 +29,13 @@ namespace Project.BLL.DependencyResolvers
             services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 
             //managers
+            services.AddScoped<IAppointmentManager, AppointmentManager>();
+            services.AddScoped<IClinicListManager, ClinicListManager>();
+            services.AddScoped<IClinicManager, ClinicManager>();
+            services.AddScoped<IDoctorManager, DoctorManager>();
+            services.AddScoped<IHospitalManager, HospitalManager>();
+            services.AddScoped<IUserManager, UserManager>();
+            services.AddScoped<IUserProfileManager, UserProfileManager>();
 
             return services;
         }

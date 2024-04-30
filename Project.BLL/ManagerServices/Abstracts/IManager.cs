@@ -6,9 +6,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.DAL.Repositories.Abstracts
+namespace Project.BLL.ManagerServices.Abstracts
 {
-    public interface IRepository<T> where T : class, IEntity
+    public interface IManager<T> where T : class, IEntity
     {
         //List Commands
         IQueryable<T> GetAll();
