@@ -1,0 +1,13 @@
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\bin\Debug\net8.0\Project.ENTITIES.deps.json
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\bin\Debug\net8.0\Project.ENTITIES.dll
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\bin\Debug\net8.0\Project.ENTITIES.pdb
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.csproj.AssemblyReference.cache
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.AssemblyInfoInputs.cache
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.AssemblyInfo.cs
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.csproj.CoreCompileInputs.cache
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.sourcelink.json
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.dll
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\refint\Project.ENTITIES.dll
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\Project.ENTITIES.pdb
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.ENTITIES\obj\Debug\net8.0\ref\Project.ENTITIES.dll
