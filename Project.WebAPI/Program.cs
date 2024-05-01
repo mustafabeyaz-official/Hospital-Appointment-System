@@ -16,6 +16,13 @@ namespace Project.WebAPI
             builder.Services.AddDbContextService();
             builder.Services.AddRepositoryManagerServices();
 
+            //Session
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(x =>
+            {
+                x.IdleTimeout = TimeSpan.FromMinutes(1);
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -26,6 +33,7 @@ namespace Project.WebAPI
             }
 
             app.UseAuthorization();
+            app.UseSession();
             app.MapControllers();
 
             app.Run();
