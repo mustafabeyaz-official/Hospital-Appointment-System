@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "CB6lRb0BXvusWBsgGCyux+tMriqXSSuRItSHxmW+QJPSkhJkhIeMcgXf3AA38H0XEGlYRpAIhZV04g8Vhr8qXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\musta\\Desktop\\apps\\web\\HospitalAppointmentSystem\\Project.MVCUI\\Project.MVCUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\musta\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\musta\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\musta\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\musta\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
