@@ -1,3 +1,4 @@
+using Project.BLL.DependencyResolvers;
 
 namespace Project.WebAPI
 {
@@ -7,12 +8,13 @@ namespace Project.WebAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddIdentityService();
+            builder.Services.AddDbContextService();
+            builder.Services.AddRepositoryManagerServices();
 
             var app = builder.Build();
 
@@ -24,8 +26,6 @@ namespace Project.WebAPI
             }
 
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();

@@ -12,7 +12,7 @@ namespace Project.BLL.DependencyResolvers
 {
     public static class IdentityExtensionService
     {
-        public static IServiceCollection AddIdentityExtension(this IServiceCollection services)
+        public static IServiceCollection AddIdentityService(this IServiceCollection services)
         {
             services.AddIdentity<User, IdentityRole<int>>(x =>
             {
