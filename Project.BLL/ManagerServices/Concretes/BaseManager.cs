@@ -40,9 +40,14 @@ namespace Project.BLL.ManagerServices.Concretes
         }
 
         //Modify Methods
-        public void Add(T item)
+        public string Add(T item)
         {
-            _repository.Add(item);
+            if(item.CreatedDate != null)
+            {
+                _repository.Add(item);
+                return "succesfully added";
+            }
+            return "an error occured";
         }
 
         public async Task AddAsync(T item)

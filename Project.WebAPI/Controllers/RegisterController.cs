@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Project.BLL.ManagerServices.Abstracts;
 using Project.ENTITIES.Models;
@@ -12,27 +11,27 @@ namespace Project.WebAPI.Controllers
     public class RegisterController : ControllerBase
     {
         IUserManager _userManager;
-        public RegisterController(IUserManager userManager)
+        public RegisterController(IUserManager manager)
         {
-            _userManager = userManager;
+            _userManager = manager;
         }
 
         [HttpPost]
-        public async Task<IActionResult> RegisterUser(UserRegisterRequestModel item)
+        public async Task<IActionResult> CreateUserAsync(UserRegisterRequestModel model)
         {
-            User user = new()
+            User user = new() 
             {
-                UserName = item.UserName,
-                Email = item.Email,
-                PasswordHash = item.Password
+                UserName = model.UserName,
+                Email = model.Email,
+                PasswordHash = model.Password
             };
-
+            
             bool result = await _userManager.CreateUserAsync(user);
-            if (result)
+            if(result)
             {
-                return Ok("user registeration succesful");
+                return Ok("user registeration success");
             }
-            return BadRequest("error occured while registeration");
+            return BadRequest("an error occured");
         }
     }
 }

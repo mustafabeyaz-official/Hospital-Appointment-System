@@ -14,7 +14,7 @@ namespace Project.BLL.ManagerServices.Concretes
         IHospitalRepository _repository;
         public HospitalManager(IHospitalRepository repository):base(repository)
         {
-            
+            _repository = repository;   
         }
     }
 }
