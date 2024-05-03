@@ -14,7 +14,11 @@ namespace Project.BLL.ManagerServices.Concretes
         IUserRepository _repository;
         public UserManager(IUserRepository repository):base(repository)
         {
-            
+            _repository = repository;   
+        }
+        public async Task<bool> CreateUserAsync(User user)
+        {
+            return await _repository.AddUser(user);
         }
     }
 }

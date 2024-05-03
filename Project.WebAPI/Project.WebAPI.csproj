@@ -12,11 +12,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Models\Appointments\ResponseModels\" />
+    <Folder Include="Models\Appointments\RequestModels\" />
+    <Folder Include="Models\Hospitals\ResponseModels\" />
+    <Folder Include="Models\Hospitals\RequestModels\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -150,3 +150,4 @@ C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.WebAPI\obj\Deb
 C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.WebAPI\obj\Debug\net8.0\Project.WebAPI.pdb
 C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.WebAPI\obj\Debug\net8.0\Project.WebAPI.genruntimeconfig.cache
 C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.WebAPI\obj\Debug\net8.0\ref\Project.WebAPI.dll
+C:\Users\musta\Desktop\apps\web\HospitalAppointmentSystem\Project.WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll

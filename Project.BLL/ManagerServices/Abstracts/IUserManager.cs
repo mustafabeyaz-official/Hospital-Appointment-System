@@ -9,5 +9,6 @@ namespace Project.BLL.ManagerServices.Abstracts
 {
     public interface IUserManager : IManager<User>
     {
+        public Task<bool> CreateUserAsync(User user);
     }
 }
