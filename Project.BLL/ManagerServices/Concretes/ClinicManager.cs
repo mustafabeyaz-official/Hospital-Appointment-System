@@ -14,7 +14,7 @@ namespace Project.BLL.ManagerServices.Concretes
         IClinicRepository _repository;
         public ClinicManager(IClinicRepository repository):base(repository)
         {
-            
+            _repository = repository;
         }
     }
 }

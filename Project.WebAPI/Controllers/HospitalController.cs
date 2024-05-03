@@ -12,6 +12,8 @@ namespace Project.WebAPI.Controllers
     public class HospitalController : ControllerBase
     {
         IHospitalManager _manager;
+        IClinicListManager _clinicListManager;
+        IClinicManager _clinicManager;
 
         public HospitalController(IHospitalManager manager)
         {
@@ -37,7 +39,7 @@ namespace Project.WebAPI.Controllers
             List<HospitalResponseModel> hospitals = _manager.Select(x => new HospitalResponseModel
             {
                 HospitalName = x.HospitalName,
-                Address = x.Address
+                Address = x.Address,
             }).ToList();
 
             return Ok(hospitals);

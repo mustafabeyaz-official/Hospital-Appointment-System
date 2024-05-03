@@ -52,7 +52,14 @@ namespace Project.BLL.ManagerServices.Concretes
 
         public async Task AddAsync(T item)
         {
-            await _repository.AddAsync(item);
+            if(item.CreatedDate != null)
+            {
+                await _repository.AddAsync(item);
+            }
+            else
+            {
+                throw new Exception("it is already exists");
+            }
         }
 
         public void AddRange(List<T> items)
