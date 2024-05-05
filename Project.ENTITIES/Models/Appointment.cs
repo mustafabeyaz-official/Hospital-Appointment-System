@@ -10,6 +10,7 @@ namespace Project.ENTITIES.Models
     {
         public int DoctorID { get; set; }
         public int UserID { get; set; }
+        public DateTime AppointmentDate { get; set; }
 
         //Relational Properties
         public Doctor Doctor { get; set; }
