@@ -12,9 +12,6 @@ namespace Project.WebAPI.Controllers
     public class HospitalController : ControllerBase
     {
         IHospitalManager _manager;
-        IClinicListManager _clinicListManager;
-        IClinicManager _clinicManager;
-
         public HospitalController(IHospitalManager manager)
         {
             _manager = manager;
