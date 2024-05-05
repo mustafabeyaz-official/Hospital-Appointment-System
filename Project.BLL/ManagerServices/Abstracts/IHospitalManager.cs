@@ -9,5 +9,6 @@ namespace Project.BLL.ManagerServices.Abstracts
 {
     public interface IHospitalManager : IManager<Hospital>
     {
+        public Task<bool> CreateHospitalAsync(Hospital hospital);
     }
 }

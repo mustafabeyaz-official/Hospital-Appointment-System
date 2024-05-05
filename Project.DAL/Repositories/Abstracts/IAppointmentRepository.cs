@@ -9,5 +9,6 @@ namespace Project.DAL.Repositories.Abstracts
 {
     public interface IAppointmentRepository : IRepository<Appointment>
     {
+        public Task<bool> AddAppointmentAsync(Appointment appointment);
     }
 }

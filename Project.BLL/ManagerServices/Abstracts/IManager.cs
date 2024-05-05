@@ -17,7 +17,7 @@ namespace Project.BLL.ManagerServices.Abstracts
         IQueryable<T> GetPassives();
 
         //Modify Commands
-        string Add(T item);
+        void Add(T item);
         Task AddAsync(T item);
         void AddRange(List<T> items);
         Task AddRangeAsync(List<T> items);

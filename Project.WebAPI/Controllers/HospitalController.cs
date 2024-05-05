@@ -11,10 +11,22 @@ namespace Project.WebAPI.Controllers
     [ApiController]
     public class HospitalController : ControllerBase
     {
-        IHospitalManager _manager;
-        public HospitalController(IHospitalManager manager)
+        IHospitalManager _hospitalManager;
+        public HospitalController(IHospitalManager hospitalManager)
         {
-            _manager = manager;
+            _hospitalManager = hospitalManager;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetHospitals()
+        {
+            List<HospitalResponseModel> hospitals = _hospitalManager.Select(x => new HospitalResponseModel
+            {
+                HospitalName = x.HospitalName,
+                Address = x.Address
+            }).ToList();
+
+            return Ok(hospitals);
         }
 
         [HttpPost]
@@ -23,23 +35,15 @@ namespace Project.WebAPI.Controllers
             Hospital hospital = new()
             {
                 HospitalName = model.HospitalName,
-                Address = model.HospitalAddress
+                Address = model.Address
             };
+            bool result = await _hospitalManager.CreateHospitalAsync(hospital);
 
-            string result = _manager.Add(hospital);
-            return Ok(result);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetHospitals()
-        {
-            List<HospitalResponseModel> hospitals = _manager.Select(x => new HospitalResponseModel
+            if(result)
             {
-                HospitalName = x.HospitalName,
-                Address = x.Address,
-            }).ToList();
-
-            return Ok(hospitals);
+                return Ok("hospital successfully added");
+            }
+            return BadRequest("an error occured");
         }
     }
 }

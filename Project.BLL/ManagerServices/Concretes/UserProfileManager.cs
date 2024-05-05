@@ -14,7 +14,12 @@ namespace Project.BLL.ManagerServices.Concretes
         IUserProfileRepository _repository;
         public UserProfileManager(IUserProfileRepository repository):base(repository)
         {
-            
+            _repository = repository;
+        }
+
+        public async Task<bool> CreateUserProfileAsync(UserProfile profile)
+        {
+            return await _repository.AddUserProfileAsync(profile);
         }
     }
 }

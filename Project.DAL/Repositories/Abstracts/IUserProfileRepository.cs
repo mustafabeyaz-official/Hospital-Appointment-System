@@ -9,5 +9,6 @@ namespace Project.DAL.Repositories.Abstracts
 {
     public interface IUserProfileRepository : IRepository<UserProfile>
     {
+        public Task<bool> AddUserProfileAsync(UserProfile userProfile);
     }
 }

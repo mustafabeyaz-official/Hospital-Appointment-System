@@ -15,5 +15,17 @@ namespace Project.DAL.Repositories.Concretes
         {
             
         }
+
+        public async Task<bool> AddAppointmentAsync(Appointment appointment)
+        {
+            int id = appointment.ID;
+            await this.AddAsync(appointment);
+            bool result =  await this.AnyAsync(x => x.ID == id);
+            if(result)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

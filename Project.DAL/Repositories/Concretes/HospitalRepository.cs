@@ -15,5 +15,18 @@ namespace Project.DAL.Repositories.Concretes
         {
             
         }
+
+        public async Task<bool> AddHospitalAsync(Hospital hospital)
+        {
+            try
+            {
+                await AddAsync(hospital);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

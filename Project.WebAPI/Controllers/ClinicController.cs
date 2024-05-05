@@ -14,8 +14,8 @@ namespace Project.WebAPI.Controllers
         IClinicListManager _clinicListManager;
         public ClinicController(IClinicManager clinicManager, IClinicListManager clinicListManager)
         {
-            _clinicListManager = clinicListManager;
             _clinicManager = clinicManager;
+            _clinicListManager = clinicListManager;
         }
 
         [HttpPost]
@@ -23,17 +23,23 @@ namespace Project.WebAPI.Controllers
         {
             Clinic clinic = new()
             {
-                ClinicName = model.ClinicName,
-                Description = model.ClinicDescription
+                ClinicName = model.ClinickName,
+                Description = model.Description,
             };
-            await _clinicManager.AddAsync(clinic);
+            bool result = await _clinicManager.CreateClinicAsync(clinic);
+
             ClinicList clinicList = new()
             {
-                HospitalID = model.HospitalId,
+                HospitalID = model.HospitalID,
                 ClinicID = clinic.ID
             };
-            await _clinicListManager.AddAsync(clinicList);
-            return Ok("success");
+            bool result2 = await _clinicListManager.CreateClinicToListAsync(clinicList);
+
+            if (result & result2)
+            {
+                return Ok("clinic successfully added");
+            }
+            return BadRequest("an error occured");
         }
     }
 }

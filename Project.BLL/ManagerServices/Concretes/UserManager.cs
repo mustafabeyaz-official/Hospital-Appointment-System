@@ -18,7 +18,7 @@ namespace Project.BLL.ManagerServices.Concretes
         }
         public async Task<bool> CreateUserAsync(User user)
         {
-            return await _repository.AddUser(user);
+            return await _repository.AddUserAsync(user);
         }
     }
 }

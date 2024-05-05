@@ -16,5 +16,10 @@ namespace Project.BLL.ManagerServices.Concretes
         {
             _repository = repository;
         }
+
+        public async Task<bool> CreateClinicAsync(Clinic clinic)
+        {
+            return await _repository.AddClinicAsync(clinic);
+        }
     }
 }

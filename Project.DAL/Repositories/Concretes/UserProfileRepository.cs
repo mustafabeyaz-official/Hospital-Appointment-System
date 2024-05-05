@@ -15,5 +15,18 @@ namespace Project.DAL.Repositories.Concretes
         {
             
         }
+
+        public async Task<bool> AddUserProfileAsync(UserProfile userProfile)
+        {
+            try
+            {
+                await AddAsync(userProfile);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

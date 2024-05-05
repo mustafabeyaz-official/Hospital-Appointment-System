@@ -16,5 +16,10 @@ namespace Project.BLL.ManagerServices.Concretes
         {
             _repository = repositiory;  
         }
+
+        public async Task<bool> CreateAppointmentAsync(Appointment appointment)
+        {
+            return await _repository.AddAppointmentAsync(appointment);
+        }
     }
 }

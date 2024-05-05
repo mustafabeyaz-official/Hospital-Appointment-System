@@ -15,5 +15,18 @@ namespace Project.DAL.Repositories.Concretes
         {
             
         }
+
+        public async Task<bool> AddClinicToListAsync(ClinicList clinicList)
+        {
+            try
+            {
+                await AddAsync(clinicList);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

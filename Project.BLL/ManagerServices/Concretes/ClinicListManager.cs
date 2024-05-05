@@ -14,7 +14,12 @@ namespace Project.BLL.ManagerServices.Concretes
         IClinicLIstRepository _repository;
         public ClinicListManager(IClinicLIstRepository repository):base(repository)
         {
-            
+            _repository = repository;
+        }
+
+        public async Task<bool> CreateClinicToListAsync(ClinicList clinicList)
+        {
+            return await _repository.AddClinicToListAsync(clinicList);
         }
     }
 }
