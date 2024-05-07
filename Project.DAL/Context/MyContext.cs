@@ -20,6 +20,7 @@ namespace Project.DAL.Context
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            //applying entity configurations
             builder.ApplyConfiguration(new AppointmentConfiguration());
             builder.ApplyConfiguration(new ClinicConfiguration());
             builder.ApplyConfiguration(new ClinicListConfiguration());
@@ -28,6 +29,7 @@ namespace Project.DAL.Context
             builder.ApplyConfiguration(new UserConfiguration());
             builder.ApplyConfiguration(new UserProfileConfiguration());
         }
+        //database tables
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }

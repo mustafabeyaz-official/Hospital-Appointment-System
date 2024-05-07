@@ -18,6 +18,7 @@ namespace Project.WebAPI.Controllers
             _userProfileManager = userProfileManager;
         }
 
+        //user registeration and creation user profile
         [HttpPost]
         public async Task<IActionResult> CreateUser(UserRegisterRequestModel model)
         {

@@ -33,11 +33,9 @@ namespace Project.DAL.Repositories.Abstracts
         bool Any(Expression<Func<T, bool>> exp);
         Task<bool> AnyAsync(Expression<Func<T, bool>> exp);
         T FirstOrDefault(Expression<Func<T, bool>> exp);
-        Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> exp);
         IQueryable<X> Select<X>(Expression<Func<T, X>> exp);
 
         //Find Commands
         T Find(int id);
-        Task<T> FindAsync(int id);
     }
 }

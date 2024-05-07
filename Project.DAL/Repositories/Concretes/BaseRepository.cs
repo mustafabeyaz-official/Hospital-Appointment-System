@@ -69,7 +69,7 @@ namespace Project.DAL.Repositories.Concretes
         {
             item.Status = ENTITIES.Enums.DataStatus.Updated;
             item.ModifiedDate = DateTime.Now;
-            T original = await FindAsync(item.ID);
+            T original =  Find(item.ID);
             _db.Entry(original).CurrentValues.SetValues(item);
             await _db.SaveChangesAsync();
         }
@@ -127,12 +127,7 @@ namespace Project.DAL.Repositories.Concretes
 
         public T FirstOrDefault(Expression<Func<T, bool>> exp)
         {
-            return _db.Set<T>().FirstOrDefault(exp);
-        }
-
-        public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> exp)
-        {
-            return await _db.Set<T>().FirstOrDefaultAsync(exp);
+            return _db.Set<T>().FirstOrDefault(exp)!;
         }
 
         public IQueryable<X> Select<X>(Expression<Func<T, X>> exp)
@@ -143,11 +138,7 @@ namespace Project.DAL.Repositories.Concretes
         //Find Methods
         public T Find(int id)
         {
-            return _db.Set<T>().Find(id);
-        }
-        public async Task<T> FindAsync(int id)
-        {
-            return await _db.Set<T>().FindAsync(id);
+            return _db.Set<T>().Find(id)!;
         }
     }
 }

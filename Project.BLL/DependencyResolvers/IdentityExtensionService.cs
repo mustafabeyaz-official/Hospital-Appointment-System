@@ -14,10 +14,12 @@ namespace Project.BLL.DependencyResolvers
     {
         public static IServiceCollection AddIdentityService(this IServiceCollection services)
         {
+            //user registeration customizations
             services.AddIdentity<User, IdentityRole<int>>(x =>
             {
                 x.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
                 x.Password.RequiredLength = 8;
+                x.Password.RequiredUniqueChars = 0;
             }).AddEntityFrameworkStores<MyContext>();
 
             return services;

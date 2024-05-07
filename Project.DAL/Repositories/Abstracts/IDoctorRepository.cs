@@ -9,5 +9,6 @@ namespace Project.DAL.Repositories.Abstracts
 {
     public interface IDoctorRepository : IRepository<Doctor>
     {
+        public Task<bool> AddDoctorAsync(Doctor doctor);
     }
 }

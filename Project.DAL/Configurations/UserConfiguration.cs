@@ -13,6 +13,7 @@ namespace Project.DAL.Configurations
         public override void Configure(EntityTypeBuilder<User> builder)
         {
             base.Configure(builder);
+            //ignore ID from baseentity, use entityframework core identity Id instead
             builder.Ignore(x => x.ID);
             builder.HasKey(x => x.Id);
         }

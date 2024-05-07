@@ -17,7 +17,7 @@ namespace Project.BLL.DependencyResolvers
         public static IServiceCollection AddDbContextService(this IServiceCollection services)
         {
             ServiceProvider serviceProvider = services.BuildServiceProvider();
-            IConfiguration configuration = serviceProvider.GetService<IConfiguration>();
+            IConfiguration configuration = serviceProvider.GetService<IConfiguration>()!;
 
             services.AddDbContextPool<MyContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("MyConnection")));

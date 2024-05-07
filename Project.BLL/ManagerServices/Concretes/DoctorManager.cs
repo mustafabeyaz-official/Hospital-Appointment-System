@@ -14,7 +14,12 @@ namespace Project.BLL.ManagerServices.Concretes
         IDoctorRepository _repository;
         public DoctorManager(IDoctorRepository repository):base(repository)
         {
-            
+            _repository = repository;
+        }
+
+        public async Task<bool> CreateDoctorAsync(Doctor doctor)
+        {
+            return await _repository.AddDoctorAsync(doctor);
         }
     }
 }

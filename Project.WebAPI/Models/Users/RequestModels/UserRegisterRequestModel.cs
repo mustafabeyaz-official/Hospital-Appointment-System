@@ -3,6 +3,8 @@
     public class UserRegisterRequestModel
     {
         public string UserName { get; set; }
+
+        //firstname and lastname properties for creating user profile
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }

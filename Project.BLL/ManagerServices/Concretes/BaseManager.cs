@@ -111,11 +111,6 @@ namespace Project.BLL.ManagerServices.Concretes
             return _repository.FirstOrDefault(exp);
         }
 
-        public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> exp)
-        {
-            return await _repository.FirstOrDefaultAsync(exp);
-        }
-
         public IQueryable<X> Select<X>(Expression<Func<T, X>> exp)
         {
             return _repository.Select(exp);
@@ -125,10 +120,6 @@ namespace Project.BLL.ManagerServices.Concretes
         public T Find(int id)
         {
             return _repository.Find(id);
-        }
-        public async Task<T> FindAsync(int id)
-        {
-            return await _repository.FindAsync(id);
         }
     }
 }

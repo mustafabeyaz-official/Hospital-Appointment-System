@@ -23,7 +23,7 @@ namespace Project.ENTITIES.Models
         public DataStatus Status { get; set; }
 
         //Relational Properties
-        public List<Appointment> Appointments { get; set; }
+        public List<Appointment>? Appointments { get; set; }
         public UserProfile Profile { get; set; }
     }
 }
