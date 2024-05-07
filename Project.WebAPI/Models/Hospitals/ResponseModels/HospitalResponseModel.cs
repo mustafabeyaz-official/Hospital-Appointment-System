@@ -18,6 +18,5 @@ namespace Project.WebAPI.Models.Hospitals.ResponseModels
 
         //extra properties
         public List<string> Clinics { get; set; }
-        public List<string> Doctors { get; set; }
     }
 }
