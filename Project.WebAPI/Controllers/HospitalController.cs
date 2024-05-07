@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Project.BLL.ManagerServices.Abstracts;
+using Project.BLL.ManagerServices.Concretes;
 using Project.ENTITIES.Models;
 using Project.WebAPI.Models.Hospitals.RequestModels;
 using Project.WebAPI.Models.Hospitals.ResponseModels;
+using System.Collections.Generic;
 
 namespace Project.WebAPI.Controllers
 {
@@ -12,9 +15,13 @@ namespace Project.WebAPI.Controllers
     public class HospitalController : ControllerBase
     {
         IHospitalManager _hospitalManager;
-        public HospitalController(IHospitalManager hospitalManager)
+        IClinicListManager _clinicListManager;
+        IClinicManager _clinicManager;
+        public HospitalController(IHospitalManager hospitalManager, IClinicListManager clinicListManager, IClinicManager clinicManager)
         {
             _hospitalManager = hospitalManager;
+            _clinicManager = clinicManager;
+            _clinicListManager = clinicListManager;
         }
 
         [HttpGet]
@@ -23,7 +30,7 @@ namespace Project.WebAPI.Controllers
             List<HospitalResponseModel> hospitals = _hospitalManager.Select(x => new HospitalResponseModel
             {
                 HospitalName = x.HospitalName,
-                Address = x.Address
+                Address = x.Address,
             }).ToList();
 
             return Ok(hospitals);

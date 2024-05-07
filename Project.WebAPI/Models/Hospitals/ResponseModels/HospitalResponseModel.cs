@@ -1,4 +1,6 @@
-﻿namespace Project.WebAPI.Models.Hospitals.ResponseModels
+﻿using Project.ENTITIES.Models;
+
+namespace Project.WebAPI.Models.Hospitals.ResponseModels
 {
     public class HospitalResponseModel
     {

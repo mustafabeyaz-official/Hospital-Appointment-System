@@ -9,7 +9,7 @@ namespace Project.ENTITIES.Models
     public class Appointment : BaseEntity
     {
         public int DoctorID { get; set; }
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
         public DateTime AppointmentDate { get; set; }
 
         //Relational Properties
